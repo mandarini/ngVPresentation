@@ -18,6 +18,9 @@
     <link id="link_04" rel="import" href="slides/slide_04.html">
     <link id="link_05" rel="import" href="slides/slide_05.html">
     <link id="link_06" rel="import" href="slides/slide_06.html">
+    <link id="link_07" rel="import" href="slides/slide_07.html">
+    <link id="link_08" rel="import" href="slides/slide_08.html">
+    <link id="link_09" rel="import" href="slides/slide_09.html">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -31,30 +34,17 @@
 <body>
 <div class="reveal">
     <div class="slides">
-        <section id="section_01">Slide 1</section>
-        <section id="section_02">Slide 2
+        <section id="slide_01"></section>
+        <section id="slide_02"></section>
+        <section id="slide_03"></section>
+        <section id="slide_04"></section>
+        <section id="slide_05"></section>
+        <section id="slide_06"></section>
+        <section id="slide_07" data-markdown></section>
+        <section id="vertical">
+            <section id="slide_08"></section>
+            <section id="slide_09"></section>
         </section>
-        <section id="section_03">Slide 3</section>
-        <section id="section_04">Slide 4</section>
-        <section id="section_05"> Slide 5
-					<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
-
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
-        </section>
-        <section id="section_06">Slide 6</section>
     </div>
 </div>
 
@@ -64,13 +54,12 @@
 <script>
 
     // Load my slides
+    // Will not run on firefox due to import!
 
-    // Will only run on chrome due to import!
-
-    for (let i=1; i<7; i++) {
+    for (let i=1; i<10; i++) {
         console.log(i);
         let content = document.querySelector('link[rel="import"]#link_0'+i).import;
-        document.getElementById("section_0"+i).appendChild(content.querySelector("div#slide_0"+i));
+        document.getElementById("slide_0"+i).appendChild(content.querySelector("div#s_0"+i));
     };
 
     // More info about config & dependencies:
