@@ -27,6 +27,14 @@
     <link id="link_12" rel="import" href="slides/slide_12.html">
     <link id="link_13" rel="import" href="slides/slide_13.html">
     <link id="link_14" rel="import" href="slides/slide_14.html">
+    <link id="link_15" rel="import" href="slides/slide_15.html">
+    <link id="link_16" rel="import" href="slides/slide_16.html">
+    <link id="link_17" rel="import" href="slides/slide_17.html">
+    <link id="link_18" rel="import" href="slides/slide_18.html">
+    <link id="link_19" rel="import" href="slides/slide_19.html">
+    <link id="link_20" rel="import" href="slides/slide_20.html">
+    <link id="link_21" rel="import" href="slides/slide_21.html">
+    <link id="link_22" rel="import" href="slides/slide_22.html">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -57,9 +65,17 @@
         <section id="slide_12"></section>
         <section id="slide_13"></section>
         <section id="slide_14"></section>
-        <section id="vertical">
+        <section id="slide_15"></section>
+        <section id="slide_16"></section>
+        <section id="slide_17"></section>
+        <section id="slide_18"></section>
+        <section id="slide_19"></section>
+        <section id="slide_20"></section>
+        <section id="slide_21"></section>
+        <section id="slide_22"></section>
+        <!--<section id="vertical">-->
 
-        </section>
+        <!--</section>-->
     </div>
 </div>
 
@@ -71,10 +87,12 @@
     // Load my slides
     // Will not run on firefox due to import!
 
-    for (let i=1; i<15; i++) {
+    for (let i=1; i<23; i++) {
         console.log(i);
-        let content = document.querySelector('link[rel="import"]#link_0'+i).import;
-        document.getElementById("slide_0"+i).appendChild(content.querySelector("div#s_0"+i));
+        let index = i.toString();
+        if (i<10) index = '0'+i;
+        let content = document.querySelector('link[rel="import"]#link_'+index).import;
+        document.getElementById("slide_"+index).appendChild(content.querySelector("div#s_"+index));
     };
 
     // More info about config & dependencies:
