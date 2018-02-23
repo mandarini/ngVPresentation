@@ -1,3 +1,43 @@
+.reveal h1,
+.reveal h2,
+.reveal h3
+{
+    text-transform: uppercase;
+}
+
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    text-transform: none;
+}
+
+.reveal p {
+font-size: 70%;
+}
+
 .twitter-blue {
     color: #1da1f2;
+}
+
+.image {
+    position: relative;
+    height: 500px;
+}
+
+.image .top-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.image .caption-inside {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    color: black;
+    font-size: 50%;
+    font-weight: bold;
 }
