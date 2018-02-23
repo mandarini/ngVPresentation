@@ -15,6 +15,16 @@
 font-size: 70%;
 }
 
+.reveal ul {
+    font-size: 80%;
+    list-style-type: square;
+}
+
+span.list-notes {
+    color: #7a7a7a;
+    font-size: 65%;
+}
+
 .twitter-blue {
     color: #1da1f2;
 }
@@ -33,7 +43,7 @@ font-size: 70%;
 
 .image .caption-inside {
     position: absolute;
-    bottom: 50px;
+    bottom: 300px;
     right: 0;
     left: 0;
     margin: 0 auto;
