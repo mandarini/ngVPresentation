@@ -1,19 +1,9 @@
 <div id="s_09">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
-
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+    <h4>script loading</h4>
+    <p class="fragment">The maps APIs are loaded with a script.</p>
+    <p class="fragment">What the script does, basically, is load a global object, that is the map and all its functions
+        (<span style="color:red">google.map</span> or <span style="color:dodgerblue">ol</span>)</p>
+    <p class="fragment">There are two ways to load a script, synchronously and asynchronously:</p>
+    <p class="notes fragment"><strong>asynchronously</strong> means that your page will continue doing what a page has to do, while the script is being loaded</p>
+    <p class="notes fragment"><strong>synchronously</strong> means that your page will stop everything and wait for the script to be loaded in order to continue</p>
 </div>

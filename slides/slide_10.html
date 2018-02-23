@@ -1,19 +1,12 @@
 <div id="s_10">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
+    <h4>script loading</h4>
+    <p>Once your script is loaded and the global object is ready, normally you could be able to access
+        it from anywhere in your
+        js code, like this</p>
+    <pre>
+        <code class="hljs" data-trim contenteditable>
+                        let map = new google.maps.Map( ..details here.. );
+        </code>
+    </pre>
 
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
 </div>
