@@ -1,19 +1,20 @@
 <div id="s_15">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
-
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+	<h4><span class="highlighted">dynamic</span> script loading</h4>
+<p>
+	<code class="code-part small-code">script.addEventListener('load', callback)</code>
+	fires on script load and calls the callback function that we pass to it!
+</p>
+<pre>
+	<code class="hljs small-code" data-trim contenteditable>
+		[ScriptLoadService object].loadScript(mapsApiUrl, 'map-script-id', () => {
+      const maps = window['google']['maps'];
+      this.map = new maps.Map( ... details here ...);
+		}
+	</code>
+</pre>
+<p class="fragment small-letters">
+	Notice how instead of referencing directly the <code class="code-part">google.maps</code> object (as we could and would be allowed to),
+	we are reading it explicitly from the window object.
+	If we reference it directly, the linter will complain because it cannot see its definition.
+</p>
 </div>
