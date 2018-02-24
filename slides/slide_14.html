@@ -1,19 +1,25 @@
 <div id="s_14">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
-
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+	<h4><span class="highlighted">dynamic</span> script loading</h4>
+	<p class="fragment"><strong>How to</strong> in Angular?</p>
+	<p class="fragment">
+		We create a service that loads the script!
+	</p>
+	<pre class="fragment">
+		<code class="hljs small-code" data-trim contenteditable>
+			public loadScript(url, id, c): void {
+		    if (!document.getElementById(id)) {
+		      const script = document.createElement('script');
+		      script.type = 'text/javascript';
+		      script.src = url;
+		      script.id = id;
+		      if (c) {
+		        script.addEventListener('load', function (e) {
+		          c(null, e);
+		        }, false);
+		      }
+		      document.head.appendChild(script);
+		    }
+		  }
+		</code>
+	</pre>
 </div>
