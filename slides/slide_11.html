@@ -1,19 +1,18 @@
 <div id="s_11">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
+	<h4>script loading</h4>
+	<p class="fragment">There are two ways, thus, to know when your script is loaded.</p>
+	<h4 class="fragment">1_sync</h4>
+	<p class="fragment">You can load the script <span class="highlighted">synchronously</span>. So, the rest of your code waits
+	for the script to be loaded, and any other code you put after the loading of the script, you can be sure that it
+is executed after the script is loaded and the global script is ready</p>
 
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+	<pre class="fragment">
+			<code class="hljs small-code" data-trim>
+					<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+			</code>
+	</pre>
+<p class="fragment small-letters">
+	This is not advisable, since it can slow down your app, and in the case the script is never loaded,
+	well, then a great bit of your app is never loaded.
+</p>
 </div>

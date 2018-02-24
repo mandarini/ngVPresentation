@@ -15,6 +15,10 @@
 font-size: 70%;
 }
 
+.reveal p.large {
+font-size: 100%;
+}
+
 p.notes {
     color: #7a7a7a;
     font-size: 65%;
@@ -25,6 +29,25 @@ p.notes {
     list-style-type: square;
 }
 
+.reveal pre.full {
+  width: 100%;
+}
+
+.reveal code.small-code {
+  font-size: 70%;
+}
+
+.reveal p.small-letters {
+font-size: 60%;
+}
+
+code.code-part {
+  color: rgb(233, 173, 101);
+  background-color: rgb(91, 91, 91);
+  border-radius: 3px;
+  padding: 0 4px;
+}
+
 span.list-notes {
     color: #7a7a7a;
     font-size: 65%;
@@ -32,6 +55,22 @@ span.list-notes {
 
 .twitter-blue {
     color: #1da1f2;
+}
+
+span.highlighted {
+  font-weight: 600;
+  color:rgb(33, 156, 119);
+}
+
+.on-top {
+  position: relative;
+}
+
+.on-top .parts {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .image {

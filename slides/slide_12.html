@@ -1,19 +1,20 @@
 <div id="s_12">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
+	<h4>script loading</h4>
+	<h4 class="fragment">2_async</h4>
+	<p class="fragment">You can load the script <span class="highlighted">asynchronously</span>.</p>
+	<p class="fragment">In this case, you have to add a callback function, as shown in the example
+	from the Google Maps JS API docs: </p>
 
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+	<pre class="fragment full">
+			<code class="hljs small-code" data-trim contenteditable>
+				<script
+				src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+				 async defer>
+			 </script>
+			</code>
+	</pre>
+<p class="fragment small-letters">
+ When the script is loaded, it will search a global function, named here <code class="code-part">initMap</code>, to execute it.
+ In the scope of this function, the <code class="code-part">google.maps</code> object will be available.
+</p>
 </div>
