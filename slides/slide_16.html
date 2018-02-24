@@ -1,19 +1,17 @@
 <div id="s_16">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
-
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+<h4>step by step</h4>
+<ol>
+	<li>
+		create a script loading service with the script loading function <br />
+		<code class="code-part small-code">@Injectable() export class ScriptLoadService {}</code>
+	</li>
+<li>
+	import it as a provider to your app module <br />
+	<code class="code-part small-code">providers: [ScriptLoadService]</code>
+</li>
+<li>
+	define it in your constructor in the component that uses the map <br />
+	<code class="code-part small-code">constructor(private load: ScriptLoadService) {}</code>
+</li>
+</ol>
 </div>

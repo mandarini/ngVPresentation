@@ -1,19 +1,46 @@
 <div id="s_18">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
+	<h4>the full component code</h4>
+	<pre>
+		<code class="hljs small-code" data-trim contenteditable>
+			import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+			import { ScriptLoadService } from '../script-load.service';
 
-                            var nodes = document.querySelectorAll( selector );
+			const your_API_key = 'xxx';
+			const url = 'https://maps.googleapis.com/maps/api/js?key=' + your_API_key;
 
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
+			@Component({
+			  selector: 'app-g-map',
+			  templateUrl: './g-map.component.html',
+			  styleUrls: ['./g-map.component.css']
+			})
+			export class GMapComponent implements AfterViewInit  {
 
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+			  @ViewChild('mapElement') mapElm: ElementRef;
+
+			  private map: any;
+
+			  constructor(private load: ScriptLoadService) {
+			  }
+
+			  ngAfterViewInit(): void {
+
+			    this.load.loadScript(url, 'gmap',() => {
+			      const maps = window['google']['maps'];
+			      const loc = new maps.LatLng(51.561638, -0.14);
+			      this.map = new maps.Map(this.mapElm.nativeElement, {
+			        zoom: 11,
+			        center: loc,
+			        scrollwheel: true,
+			        panControl: false,
+			        mapTypeControl: false,
+			        zoomControl: true,
+			        streetViewControl: false,
+			        scaleControl: true,
+			      });
+					});
+				}
+
+			}
+		</code>
+	</pre>
 </div>

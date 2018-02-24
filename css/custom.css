@@ -29,6 +29,10 @@ p.notes {
     list-style-type: square;
 }
 
+.reveal ol {
+    font-size: 80%;
+}
+
 .reveal pre.full {
   width: 100%;
 }
