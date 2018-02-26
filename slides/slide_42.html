@@ -1,25 +1,20 @@
 <div id="s_42">
-    <h4>other methods</h4>
-    <ol>
-        <li class="fragment">change map colors<br/>
-            <pre style="width: 100%;">
-        <code class="hljs small-code" data-trim contenteditable>
-                const darkmap = new maps.StyledMapType(styledMap, {name: 'Dark Map'});
-                this.map.mapTypes.set('dark_map', darkmap);
-                this.map.setMapTypeId('dark_map');
-              </code>
-            </pre>
-        </li>
-        <li class="fragment">
-            set focus buttons<br/>
-            <pre>
-        <code class="hljs small-code" data-trim contenteditable>
-                <button (click)="focus()">London</button>
-                focus() {
-                   this.map.setCenter(this.coords(51.5616, -0.14));
-                }
-            </code>
-            </pre>
-        </li>
-    </ol>
+    <h4>needs customization</h4>
+    <p class="fragment">define tile server and layer</p>
+    <pre class="fragment">
+	    <code class="hljs small-code" data-trim contenteditable>
+	        this.osm = new ol.layer.Tile({
+                source: new ol.source.OSM()
+            });
+	    </code>
+    </pre>
+    <p class="fragment">define view (center, projection, zoom)</p>
+    <pre class="fragment">
+	    <code class="hljs small-code" data-trim contenteditable>
+	        this.view =  new ol.View({
+                center: ol.proj.fromLonLat([23.82, 37.41]),
+                zoom: 6
+            });
+	    </code>
+    </pre>
 </div>
