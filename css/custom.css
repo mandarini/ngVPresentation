@@ -29,6 +29,10 @@ p.notes {
     list-style-type: square;
 }
 
+.reveal ul.final-list {
+    font-size: 50%;
+}
+
 .reveal ol {
     font-size: 80%;
 }
@@ -98,4 +102,19 @@ span.highlighted {
     color: black;
     font-size: 50%;
     font-weight: bold;
+}
+
+.final-container {
+    position: relative;
+}
+
+.right {
+    float: right;
+    width: 30%;
+    text-align: left;
+}
+
+.left {
+    float: left;
+    width: 50%;
 }
