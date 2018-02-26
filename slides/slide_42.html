@@ -1,0 +1,25 @@
+<div id="s_42">
+    <h4>other methods</h4>
+    <ol>
+        <li class="fragment">change map colors<br/>
+            <pre style="width: 100%;">
+        <code class="hljs small-code" data-trim contenteditable>
+                const darkmap = new maps.StyledMapType(styledMap, {name: 'Dark Map'});
+                this.map.mapTypes.set('dark_map', darkmap);
+                this.map.setMapTypeId('dark_map');
+              </code>
+            </pre>
+        </li>
+        <li class="fragment">
+            set focus buttons<br/>
+            <pre>
+        <code class="hljs small-code" data-trim contenteditable>
+                <button (click)="focus()">London</button>
+                focus() {
+                   this.map.setCenter(this.coords(51.5616, -0.14));
+                }
+            </code>
+            </pre>
+        </li>
+    </ol>
+</div>
