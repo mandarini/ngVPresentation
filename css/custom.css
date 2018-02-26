@@ -110,11 +110,11 @@ span.highlighted {
 
 .right {
     float: right;
-    width: 30%;
+    width: 60%;
     text-align: left;
 }
 
 .left {
     float: left;
-    width: 50%;
+    width: 30%;
 }
