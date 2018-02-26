@@ -1,25 +1,25 @@
 <div id="s_45">
-    <h4>other methods</h4>
-    <ol>
-        <li class="fragment">change map colors<br/>
-            <pre style="width: 100%;">
+    <h4>interactions - draw</h4>
+    <p>add a vector layer</p>
+    <pre style="width: 100%;">
         <code class="hljs small-code" data-trim contenteditable>
-                const darkmap = new maps.StyledMapType(styledMap, {name: 'Dark Map'});
-                this.map.mapTypes.set('dark_map', darkmap);
-                this.map.setMapTypeId('dark_map');
-              </code>
-            </pre>
-        </li>
-        <li class="fragment">
-            set focus buttons<br/>
-            <pre>
+           const vector = new ol.layer.Vector({
+               source: source
+           });
+           this.map = new ol.Map({
+               target: 'olmap',
+               layers: [this.osm, vector],
+               view: this.view
+           });
+        </code>
+    </pre>
+    <p>create an interaction</p>
+    <pre style="width: 100%;">
         <code class="hljs small-code" data-trim contenteditable>
-                <button (click)="focus()">London</button>
-                focus() {
-                   this.map.setCenter(this.coords(51.5616, -0.14));
-                }
-            </code>
-            </pre>
-        </li>
-    </ol>
+           this.draw = new ol.interaction.Draw({
+                 source: source,
+                 type: 'Point'
+           });
+        </code>
+    </pre>
 </div>
