@@ -1,19 +1,67 @@
 <div id="s_31">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
-
-                            var nodes = document.querySelectorAll( selector );
-
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
-
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+    <h4>polygons - geojson</h4>
+	<pre class="fragment">
+        <code class="hljs small-code" data-trim contenteditable>
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 112,
+        "LOWERSOA": "E01006279",
+        "HOUSEHOLDS": 508,
+        "POPULATION": 1381,
+        "AREA_NAME": "Hindley Green/Leigh Road",
+        "TOWN": "Hindley Green",
+        "TOWNSHIP": "Hindley Abram",
+        "WARD": "Hindley Green",
+        "COMMUNITY": "Hindley / Hindley Green",
+        "PREVALENCE": 1.32742523,
+        "RANK": 28222,
+        "QUINTILE": 5,
+        "POPULATI_1": 242,
+        "NUMBER_LONELY": 3.21236907
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.5434842249308414,
+              53.52476717517185
+            ],
+            [
+              -2.5434529712385974,
+              53.52478724476709
+            ],
+            ...
+            ...
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 113,
+        "LOWERSOA": "E01006306",
+        "HOUSEHOLDS": 808,
+        "POPULATION": 1409,
+        "AREA_NAME": "Darlington Street East",
+        "TOWN": "Wigan",
+        "TOWNSHIP": "Wigan North",
+        "WARD": "Ince",
+        "COMMUNITY": "Ince / Scholes",
+        "PREVALENCE": 3.52357582,
+        "RANK": 1725,
+        "QUINTILE": 1,
+        "POPULATI_1": 269,
+        "NUMBER_LONELY": 9.47841894
+      },
+      ...
+  ]
+}
+					</code>
+    </pre>
 </div>

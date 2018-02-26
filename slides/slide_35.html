@@ -1,19 +1,21 @@
 <div id="s_35">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
+    <h4>points - shapes</h4>
+    <pre>
+        <code class="hljs small-code" data-trim contenteditable>
 
-                            var nodes = document.querySelectorAll( selector );
+        const antenna = new maps.MarkerImage('path-to-image/marker-image.png');
 
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
+        this.http.get('path-to-file/file.json').subscribe(data => {
+            this.masts = data['data'];
 
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+            this.masts.map(x => {
+                new maps.Marker({
+                position: new maps.LatLng(x[18], x[17]),
+                icon: antenna,
+                size: new maps.Size(30, 30),
+                map: this.map
+                });
+            });
+        </code>
+    </pre>
 </div>

@@ -1,19 +1,20 @@
 <div id="s_32">
-	<p>this is the 9th slide</p>
-	<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                            if( supports3DTransforms ) {
+    <h4>polygons - geojson</h4>
+    <pre>
+        <code class="hljs small-code" data-trim contenteditable>
+            this.map.data.loadGeoJson('path-to-file/filename.geojson');
+            this.map.data.setStyle(function(feature) {
 
-                            var nodes = document.querySelectorAll( selector );
+                const lon = feature.getProperty('PREVALENCE');
 
-                            for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                                var node = nodes[i];
+                const value = 255 - Math.round(mapNumber(lon, 0, 5, 0, 255));
+                const color = 'rgb(' + value + ',' + value + ',' + 0 + ')';
 
-                                if( !node.className ) {
-                                    node.className += ' roll';
-                                }
-                            }
-                        }
-                    }
-					</code></pre>
+                return {
+                    fillColor: color,
+                    strokeWeight: 1
+                };
+            });
+        </code>
+    </pre>
 </div>
