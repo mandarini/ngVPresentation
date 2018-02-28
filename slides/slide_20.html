@@ -1,17 +1,17 @@
 <div id="s_20">
 	<h4>AfterViewInit</h4>
-<p class="small-letters">
+<p class="fragment small-letters">
 	So, why are we using <code class="code-part">AfterViewInit</code> interface, and the ViewChild decorator?
 </p>
-	<p class="notes">
+	<p class="fragment notes">
 		We need access to the component DOM view and its children.
 	</p>
-	<p class="notes">from the angular docs about <a href="https://angular.io/guide/lifecycle-hooks" rel="noopener">lifecycle hooks</a>: <br/>
+	<p class="fragment notes">from the angular docs about <a href="https://angular.io/guide/lifecycle-hooks" rel="noopener">lifecycle hooks</a>: <br/>
 		<em><code class="code-part small-code">ngAfterViewInit()</code>
 		is called once after Angular initializes the component's views and child views / the view that a directive is in.</em>
 	</p>
-	<p class="notes">we use <code class="code-part small-code">@ViewChild('mapElement') mapElm: ElementRef;</code> <br/>
+	<p class="fragment notes">we use <code class="code-part small-code">@ViewChild('mapElement') mapElm: ElementRef;</code> <br/>
 	to let angular know that we are looking for a native DOM element.
 	</p>
-	<p class="notes">then we hook it to <code class="code-part small-code">ngAfterViewInit()</code> where the view children have been created.</p>
+	<p class="fragment notes">then we hook it to <code class="code-part small-code">ngAfterViewInit()</code> where the view children have been created.</p>
 </div>

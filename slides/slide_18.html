@@ -26,7 +26,7 @@
 
 			    this.load.loadScript(url, 'gmap',() => {
 			      const maps = window['google']['maps'];
-			      const loc = new maps.LatLng(51.561638, -0.14);
+			      const loc = new maps.LatLng(38, 23);
 			      this.map = new maps.Map(this.mapElm.nativeElement, {
 			        zoom: 11,
 			        center: loc,

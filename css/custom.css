@@ -24,6 +24,20 @@ p.notes {
     font-size: 65%;
 }
 
+p.caption {
+  margin-top: 5px;
+  background: rgb(46, 45, 45);
+  padding: 3px;
+  border-radius: 3px;
+  color: #7a7a7a;
+  font-size: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+}
+
 .reveal ul {
     font-size: 80%;
     list-style-type: square;
