@@ -2,5 +2,9 @@
 
 These are my slides for the ngVikings conference presentation!
 
-They will not work on Firefox because I am using [HTML Imports](https://developer.mozilla.org/en-US/docs/Web/Web_Components/HTML_Imports),
-which Firefox does not ship.
+Finally added the [polyfill](https://www.webcomponents.org/polyfills/#html-imports-polyfill) for 
+ [HTML Imports](https://developer.mozilla.org/en-US/docs/Web/Web_Components/HTML_Imports),
+so now all browsers are supported!
+
+Here is the link to the presentation:
+[https://mandarini.github.io/ngVPresentation](https://mandarini.github.io/ngVPresentation)
