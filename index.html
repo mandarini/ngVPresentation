@@ -6,12 +6,16 @@
 
     <title>Web Maps! Putting the M in Angular Web Maps</title>
 
+
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
     <link rel="stylesheet" href="css/custom.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-hi-sd-ce.js"></script>
 
     <link id="link_01" rel="import" href="slides/slide_01.html">
     <link id="link_02" rel="import" href="slides/slide_02.html">
@@ -154,15 +158,15 @@
 
     // Load my slides
     // Will not run on firefox due to import!
-
-    for (let i = 1; i < 52; i++) {
-        console.log(i);
-        let index = i.toString();
-        if (i < 10) index = '0' + i;
-        let content = document.querySelector('link[rel="import"]#link_' + index).import;
-        document.getElementById("slide_" + index).appendChild(content.querySelector("div#s_" + index));
-    }
-    ;
+    window.addEventListener('WebComponentsReady', function() {
+        for (let i = 1; i < 52; i++) {
+            console.log(i);
+            let index = i.toString();
+            if (i < 10) index = '0' + i;
+            let content = document.querySelector('link[rel="import"]#link_' + index).import;
+            document.getElementById("slide_" + index).appendChild(content.querySelector("div#s_" + index));
+        }
+    });
 
     // More info about config & dependencies:
     // - https://github.com/hakimel/reveal.js#configuration
@@ -196,5 +200,6 @@
     });
     Reveal.configure({ slideNumber: false });
 </script>
+
 </body>
 </html>
